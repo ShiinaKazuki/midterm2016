@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <title>Accel World</title>
+
+<link rel="stylesheet" href="../css/foundation.css" />
+<script src="../js/vendor/modernizr.js"></script>
+<script src="../scripts/angular.min.js"></script>
+
+
+
+
+
+
+  <style type="text/css">
+  
+    
+    
+body {
+    color: white;
+    font-size: 150%
+}
+
+h4 {
+	color: aqua;
+}
+    
+    
+  
+  
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+	font-weight: 200;
+	font-size: 20px;
+}
+
+.parallax-background {
+    background: #0078A0 url('Pictures/image.gif') no-repeat center;
+	background-color: #0078A0;
+	height: 900px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+}
+
+.intro-text {
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	margin-top: 15%;
+}
+.parallax-content {
+	max-width: 100%;
+	position: relative;
+	top: 500px;
+	padding: 50px;
+	font-size: 20px;
+	background-color: #fff;
+}
+  
+  
+  .image-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: 4px; }
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0; }
+
+.overlay-fade-in p {
+  letter-spacing: 0.15em;
+  color: aqua;
+  font-size: 28px;
+  opacity: 0;
+  margin-top: 8%;
+  transition: all 0.2s linear; }
+.overlay-fade-in img {
+  transition: all 0.2s linear; }
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out; }
+.overlay-fade-in h2 {
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  margin-top: 3%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.7); }
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #FFF;
+  color: #222;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  border: 1px solid #999;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+  .overlay-fade-in .button:hover {
+    box-shadow: 0 0 5px #000; }
+.overlay-fade-in:hover img {
+  transform: scale(1.2); }
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1; }
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1; }
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s; }
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s; }
+  
+  .overlay-slide-in-left img {
+  transition: all 0.3s ease-in-out; }
+.overlay-slide-in-left .image-overlay-content {
+  background-image: url(http://www.awwwards.com/awards/images/2015/04/pattern.jpg);
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-110%);
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 7px #ccc; }
+.overlay-slide-in-left h2 {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 40%;
+  color: #000;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
+.overlay-slide-in-left p {
+  opacity: 0;
+  color: #333;
+  transition: all 0.2s linear; }
+.overlay-slide-in-left .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  border-radius: 7px; }
+  .overlay-slide-in-left .button:hover {
+    background-color: #444; }
+.overlay-slide-in-left:hover .image-overlay-content {
+  transform: translateX(0px); }
+.overlay-slide-in-left:hover img {
+  transform: translateX(80%);
+  transition-delay: 0.1s; }
+.overlay-slide-in-left:hover p {
+  opacity: 1;
+  transition-delay: 0.4s; }
+
+.overlay-fade-in-new-background .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+  .overlay-fade-in-new-background .button:hover {
+    box-shadow: 0 0 5px #fff;
+    background-color: #222; }
+.overlay-fade-in-new-background p {
+  font-size: 28px; }
+.overlay-fade-in-new-background .image-overlay-content {
+  opacity: 0;
+  background-image: url(http://subtlepatterns.com/patterns/gplaypattern.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease-in-out; }
+.overlay-fade-in-new-background h2 {
+  color: #000;
+  font-size: 1.6rem;
+  margin-top: 5%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+.overlay-fade-in-new-background p {
+  opacity: 0;
+  transition: all 0.2s linear; }
+.overlay-fade-in-new-background img {
+  transition: all 0.2s ease-in-out; }
+.overlay-fade-in-new-background:hover img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  transform: scale(1.5); }
+.overlay-fade-in-new-background:hover .image-overlay-content {
+  opacity: 1; }
+.overlay-fade-in-new-background:hover h2, .overlay-fade-in-new-background p, .overlay-fade-in-new-background .button {
+  opacity: 1; }
+.overlay-fade-in-new-background:hover p {
+  transition-delay: 0.1s; }
+.overlay-fade-in-new-background:hover .button {
+  transition-delay: 0.2s; }
+  
+
+p.price1{
+	margin-top: 23px;
+}  
+  
+
+.auto-style1 {
+	color: #FFFFFF;
+}
+</style>
+
+
+<body style="background-color:black">
+
+
+
+</head>
+
+<body>
+
+
+
+<!-- Begin Container -->
+<div id="container">
+	
+	<!-- Begin Navigation -->
+	
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+
+            <li class="name">
+              <h1>
+  				<a href="default.html">
+                  Accel World
+            
+                </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+
+            <ul class="right">
+          
+              <li class="divider"></li>
+              <li class="has-dropdown">
+              	<a href="../default.html">Home</a>
+                <ul class="dropdown">          
+                  <li><a href="../Grisaia%20No%20Kaijitsu/default.html">Grisaia No Kajitsu</a></li>
+                  <li><a href="../Grisaia%20no%20Rakuen/default.html">Grisaia no Rakuen</a></li>
+                  <li><a href="../Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Sakurasou no Pet na Kanojo</a></li>
+                  <li><a href="default.html">Accel World</a></li>
+                  <li><a href="../No%20Game%20No%20Life/default.html">No Game no Life</a></li>
+                  <li class="divider"></li>
+                                  </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Foundation</label></li>
+        <li><a href="#" class="off-canvas-submenu-call">Option 1 <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="../default.html">Home</a></li>
+                                <li><a href="../Grisaia%20No%20Kaijitsu/default.html">Grisaia No Kajitsu</a></li>
+								<li><a href="../Grisaia%20no%20Rakuen/default.html">Grisaia no Rakuen</a></li>
+								<li><a href="../Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Sakurasou no Pet na Kanojo</a></li>
+								<li><a href="default.html">Accel World</a></li>
+								<li><a href="../No%20Game%20No%20Life/default.html">No Game no Life</a></li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+
+			
+		
+<div class="parallax-background">
+  <div class="intro-text">
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="small-4 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image10.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image9.jpg" style="height:340px;width:255px"/></h2>
+        <p class="price">Haruyuki Arita- Silver Crow</p>
+      </div>
+
+    </div>
+  
+  </div>
+
+<div class="row">
+  <div class="small-4 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image12.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image11.jpg" style="height:340px;width:255px"/></h2>
+        <p class="price">Kuroyukihime- Black Lotus</p>
+      </div>
+    
+    </div>
+  
+  </div>
+<div class="row">
+  <div class="small-4 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image14.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image13.jpg" style="height:340px;width:270px"/></h2>
+        <p class="price">Yuniko Kōzuki- Scarlet Rain</p>
+      </div>
+    
+    </div>
+  
+  </div>
+  
+<div class="row">
+  <div class="small-3 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image2.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image1.jpg" style="height:300px;width:255px"/></h2>
+        <p class="price">Takumu Mayuzumi- Cyan Pile</p>
+      </div>
+    
+    </div>
+  
+  </div>
+  
+<div class="row">
+  <div class="small-3 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image4.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image3.jpg" style="height:300px;width:255px"/></h2>
+        <p class="price">Chiyuri Kurashima- Lime Bell</p>
+      </div>
+    
+    </div>
+  
+  </div>
+<div class="row">
+  <div class="small-3 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image6.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image5.jpg" style="height:300px;width:255px"/></h2>
+        <p class="price">Fuuko Kurasaki- Sky Raker</p>
+      </div>
+    
+    </div>
+  
+  </div>
+<div class="row">
+  <div class="small-3 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image8.jpg" style="height:450px;width:450px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image7.jpg" style="height:335px;width:255px"/></h2>
+        <p class="price1">Mihaya Kakei- Blood Leopard</p>
+      </div>
+    
+    </div>
+  
+  </div>
+
+  <div class="small-4.5 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image17.gif" style="height:500px;width:1200px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image18.gif" style="height:425px;width:1200px"/></h2>
+      </div>
+    
+    </div>
+  
+  </div>
+
+</div>
+  <div class="small-4.5 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image21.gif" style="height:500px;width:1200px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image22.gif" style="height:425px;width:1200px"/></h2>
+      </div>
+
+    </div>
+  
+  </div>
+    
+</div>
+
+  <div class="small-4.5 columns">
+
+    <div class="image-wrapper overlay-fade-in">
+      
+      <img alt="" src="Pictures/image19.gif" style="height:500px;width:1200px"/>
+      
+      <div class="image-overlay-content">
+        <h2><img alt="" src="Pictures/image20.gif" style="height:425px;width:1200px"/></h2>
+      </div>
+    
+    </div>
+  
+  </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <hr>
+  <div class="large-2 columns">
+
+    <ul class="clearing-thumbs" data-clearing>
+      <li><a href="Pictures/image26.gif"><img src="Pictures/image26.gif" style="width:200px;height:150px"></a></li>
+      <li><a href="Pictures/image27.gif"><img src="Pictures/image27.gif" style="width:200px;height:150px"></a></li>
+      <li><a href="Pictures/image28.gif"><img src="Pictures/image28.gif" style="width:200px;height:150px"></a></li>
+    </ul>
+  </div>
+  <div class="large-5 columns">
+    
+  <img alt="" src="Pictures/image23.jpg" style="width:395px"/>
+  </div>
+  <div class="large-5 columns">
+    <h1><font color="aqua">Synopsis & Genre</font></h1>
+    <p>
+      The year is 2046. Haruyuki Arita is a young boy who finds himself on the lowest social rungs of his school. Ashamed of his miserable life, Haruyuki can only cope by indulging in virtual games. But that all changes when Kuroyukihime, the most popular girl in school, introduces him to a mysterious program called Brain Burst and a virtual reality called the Accel World.
+      </br></br><font color="lime"><font size="5">Action, drama, psychological, romance, science fiction, tournament</br></br>
+      <font size="7"><font color="aqua">Themes</font></font></br>Augmented reality, fighting, future, growing up, online computer gaming, school, school life, technology, virtual reality    </font></font></p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-6 columns">
+    <h1><font size="9"><font color="aqua">Characters</font></font></h1>    
+      <img alt="" src="Pictures/image25.jpg" style="width:1000px"/>
+    <h4>Arita Haruyuki- MC</h4>
+    <p>Arita Haruyuki is the main protagonist of the Accel World series. He's known by his Brain Burst avatar Silver Crow for his flying abilities, because he is the only brain burst avatar that can fly. He decides to team up with Kuroyukihime to defeat the The Six Kings of Pure Color and meet the creator of the Brain Burst game.</p>
+  <img alt="" src="Pictures/image29.jpg" style="width:1000px"/>
+    <h4>Takumu Mayuzumi</h4>
+    <p>Chiyuri's boyfriend. He is excellent at academics and athletics. He attends a famous school that goes from elementary to high school. Haru looked up to him as a role model and mentor whenever they battle in Accel World together. After joining Nega Nebulus, he calls Kuroyukihime "master" as a sign of respect.</p>
+  <img alt="" src="Pictures/image34.jpg" />
+    <h4>Ash Roller</h4>
+    <p>Ash Roller was revealed to have a violent nature and uses profane actions. He is very arrogant and cocky whenever he has the upper hand in battle. However, it can easily change to frustration and more profanity if his enemy changes the situation. However, during the first meeting of Silver Crow and Sky Raker, his guardian, Ash Roller's personality changes drastically. He acts more diligently and polite when addressing his guardian as boss as a sign of respect. Raker claims that underneath Ash's arrogant personality is a good guy. Despite belonging to rival Legions, he still values Silver Crow as a friend. He had no problem with revealing a rival from another Legion the limit of his «Wall Climb ability and aiding him in his recovery.Ash Roller's real life identity is that of Kusakabe Rin's older brother, who is currently in a coma. Due to using her brother's instead of her own at the time Brain Burst was installed, either his own soul or a copy of his took control over the program. Thus, while Rin knows about how Ash Roller spends level up bonuses and is the one in charge of real life matters, she has no control over his actions inside the accelerated world in any way. It is known he was also a professional motorcycle racer, which explains his prowess in using his Enhanced Armament from the very start, thus being one of the few Duel Avatars whose abilities match their real life field of expertise.</p>  
+  <img alt="" src="Pictures/image32.jpg" style="width:1000px"/>
+    <h4>Yuniko Kōzuki</h4>  
+    <p>Yuniko Kōzuki is the second and current Red King and also the leader of the Red Legion, Prominence. Yuniko is an elementary student and attends a private school. Her duel avatar is Scarlet Rain who is the current Red King following Red Rider. As the 2nd Red King after Red Rider, the first Red King, she is one of the few Level 9 players. She is nicknamed 'The Immobile Fortress' due to her fighting style where she boards her huge armament with powerful long-range artillery that allows her to defeat legions of enemies while standing in the same place. She later demonstrates her abilities with the Incarnate System when she helps teach Haru and Taku to use it.</p>
+    
+    
+  </div>
+  <div class="large-6 columns"></br></br>
+  <img alt="" src="Pictures/image24.jpg" style="width:1000px"/>
+    <h4>Kuroyukihime- MC</h4>
+    <p>Kuroyukihime; Literally meaning "Princess Snow Black" is one of the main characters in the Accel World series. She is the current leader of the Black Legion, Nega Nebulus and was formerly known as the Black King, but hid after defeating the former "Red King". Her biggest ambition is to reach level 10 and meet the creator of the Brain Burst game, but to accomplish that goal, she has to defeat five other level 9 users who just so happen to be "The Six Kings of Pure Color", the leaders of the six most powerful factions in the Brain Burst world.</p>
+  <img alt="" src="Pictures/image31.jpg" style="width:1000px"/>
+    <h4>Fuuko Kurasaki</h4>
+    <p>Fūko is shown to be very polite to others even to ones that she has just met. She is willing to help other people even if she gains nothing in return. Her eyes always depict a hidden sadness, as if always subconsciously regretting her separation from Kuroyukihime, Black Lotus. Before Silver Crow existed she was known as 'The person closest to the sky in accelerated world' gaining the nicknames 'Astro', 'ICBM' and 'Icarus'. She became obsessed with the desire of flying; trying to obtain the ability to fly she eventually asks Black Lotus to cut off her avatar's legs to reduce her avatar's weight and increase her mind power. She regrets how she and Kuroyukihime used to be so close, but her obsession to fly caused her to lose what was important to her and eventually led to her leaving Kuroyukihime. She is also the parent of Ash Roller. She has artificial legs in the real world.</p>  
+  <img alt="" src="Pictures/image30.jpg" style="width:1000px"/>
+    <h4>Chiyuri Kurashima</h4>
+    <p>Haru's and Taku's childhood friend. Although she is dating Takumu, she also cares a lot for Haru. Chiyuri has been friends with Takumu and Haruyuki since they were children. The three of them are very close to each other and is still. During the time that they entered middle school, Chiyu decided to start a relationship with Taku. Even with their relationship, the three continued to stay close.</p>  
+  <img alt="" src="Pictures/image33.jpg" style="width:1000px"/>
+    <h4>Mihaya Kakei</h4>
+    <p>Second in command of the legion Prominence under Scarlet Rain. She works as a waitress at a cake shop that also serves as a secret base for Prominence. She is usually seen wearing a maid outfit that she wears for work and rides a motorcycle. Leopard, as she prefers to be called, is cold, blunt, and distant, though she has a sarcastic sense of humor. Her Brain Burst avatar is level 6 and has the Shape Change ability. She develops a rivalry with Sky Raker for unknown reasons.</p>  
+    
+  </div>
+</div>
+
+</div>
+    </section>
+    <div class="parallax-content">
+</div>
+
+
+   <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/foundation.min.js"></script>
+    <script>
+$(document).foundation();
+
+    </script>
+
+    
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

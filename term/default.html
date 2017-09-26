@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <title>Anime</title>
+
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
+<script src="scripts/angular.min.js"></script>
+
+
+
+
+
+  <style type="text/css">
+
+.auto-style1 {
+	color: #FFFFFF;
+}
+
+
+.hero {
+  background: url('Pictures/image16.jpg') no-repeat center;
+  background-size: cover;
+  overflow: hidden; }
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+
+
+p.a {
+  position: absolute;
+  top: 100px;
+}
+
+
+p.price {
+  position: absolute;
+  top: 100px;
+}
+
+
+
+h1.asdf {
+    position: absolute;
+    top: 340px;
+    left: 200px;
+    font-size: 350%
+}
+
+
+p.asdf {
+    position: absolute;
+}
+
+p.asd {
+    position: absolute;
+    top: 406px;
+    right: 0px;
+}
+
+
+
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: 4px; }
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0; }
+
+.overlay-fade-in p {
+  letter-spacing: 0.15em;
+  color: #f4f4f4;
+  font-size: 28px;
+  opacity: 0;
+  margin-top: 0%;
+  transition: all 0.2s linear; }
+.overlay-fade-in img {
+  transition: all 0.2s linear; }
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out; }
+.overlay-fade-in h2 {
+  color: #f2f2f2;
+  font-size: 3.3rem;
+  margin-top: 0%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background: blue; }
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #FFF;
+  color: #222;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  border: 1px solid #999;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+  .overlay-fade-in .button:hover {
+    box-shadow: 0 0 5px #000; }
+.overlay-fade-in:hover img {
+  transform: scale(1.1); }
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1; }
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1; }
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s; }
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s; }
+
+
+
+
+
+
+
+</style>
+
+
+<body style="background-color:black">
+
+
+
+
+</head>
+
+<body>
+
+<header class="hero">
+
+
+
+
+
+
+
+<!-- Begin Container -->
+<div id="container">
+	
+	<!-- Begin Navigation -->
+	
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+
+            <li class="name">
+              <h1>
+  				<a href="default.html">Anime</a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+
+            <ul class="right">
+
+              <li class="divider"></li>
+              <li class="has-dropdown">
+              	<a href="default.html">Home</a>
+                <ul class="dropdown">          
+                  <li><a href="../Grisaia%20No%20Kaijitsu/default.html">Grisaia No Kajitsu</a></li>
+                  <li><a href="Grisaia%20no%20Rakuen/default.html">Grisaia no Rakuen</a></li>
+                  <li><a href="Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Sakurasou no Pet na Kanojo</a></li>
+                  <li><a href="Accel%20World/default.html">Accel World</a></li>
+                  <li><a href="No%20Game%20No%20Life/default.html">No Game No Life</a></li>
+                  <li class="divider"></li>
+                                  </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	
+			
+
+
+			
+			
+			
+			
+		<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Foundation</label></li>
+        <li><a href="#" class="off-canvas-submenu-call">Option 1 <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="default.html">Home</a></li>
+                                <li><a href="../Grisaia%20No%20Kaijitsu/default.html">Grisaia No Kajitsu</a></li>
+                                <li><a href="Grisaia%20no%20Rakuen/default.html">Grisaia no Rakuen</a></li>
+                                <li><a href="Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Sakurasou no Pet na Kanojo</a></li>
+                                <li><a href="Accel%20World/default.html">Accel World</a></li>
+                                <li><a href="No%20Game%20No%20Life/default.html">No Game No Life</a></li>
+
+      </ul>
+    </aside>
+
+    <section class="main-section">    
+	
+
+		
+<div class="row">
+ <div class="large-12 columns">
+  <div id="slider">
+   <div class="image-wrapper overlay-fade-in">
+     <ul class="example-orbit" data-orbit>      
+  <li>
+        <div class="large-3 small-6 columns">
+          <img src="Pictures/image13.jpg" style="height:700px;"/>
+        </div>
+ 
+        <div class="large-3 small-6 columns">
+          <img src="Pictures/image14.jpg" style="height:700px;"/>
+        </div>
+ 
+        <div class="large-3 small-6 columns">
+          <img src="Pictures/image12.jpg" style="height:700px;"/>
+        </div>
+ 
+        <div class="large-3 small-6 columns">
+          <img src="Pictures/image15.jpg" style="height:700px;"/>
+        </div>
+          <div class="image-overlay-content">
+        <h2>5 really good anime.</h2>
+        <p class="price">
+		<img alt="" src="Pictures/image.jpg" style="height:700px"/></p>
+      </div>
+
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  
+  
+  <li class="active">
+    <img src="Pictures/image4.jpg" alt="slide 2" style="width:1500px;height:700px;" />
+          <div class="image-overlay-content">
+        <h2><font color="red">Ahahahahahahahah!!!</font></h2>
+        <p class="a">
+		<img alt="" src="Pictures/image5.jpg" style="height:700px;"/></p>
+      </div>
+
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  
+  
+  <li>
+  
+  <div class="large-12 small-8 columns">
+          <img src="Pictures/image6.jpg" style="width:1000px;height:350px;" />
+        </div>
+ 
+        <div class="large-12 small-6 columns">
+          <img src="Pictures/image7.jpg" style="width:1000px;height:350px;" />
+        </div>
+          <div class="image-overlay-content">
+        <h2><font color="yellow">The gut-wrenching slice of life</font></h2>
+        <p class="price">
+		<img alt="" src="Pictures/image8.jpg" style="width:1000px;height:525px;"/></p>
+      </div>
+
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  
+  
+  <li>
+  
+  <div class="large-12 small-8 columns">
+          <img src="Pictures/image9.jpg" style="width:1000px;height:350px;" />
+        </div>
+ 
+        <div class="large-12 small-6 columns">
+          <img src="Pictures/image10.jpg" style="width:1000px;height:350px;" />
+        </div>
+          <div class="image-overlay-content">
+        <h2><font color="silver">When Trauma Becomes Strength</font></h2>
+        <p class="price">
+		<img alt="" src="Pictures/image11.jpg" style="height:700px"/></p>
+      </div>
+
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  
+
+  <li>
+    <img src="Pictures/image3.gif" style="width:1500px;height:700px;" />
+          <div class="image-overlay-content">
+        <h1 class="asdf"><font color="red">Now, let the game begin!</font></h2>
+        <div class="large-7 small-6 columns">
+          <p class="asdf"><img src="Pictures/image1.gif" style="width:500" /></p>
+                  </div>
+ 
+        <div class="large-7 small-6 columns">
+          <p class="asd">
+		  <img src="Pictures/image2.gif" style="height:260px;width:500" /></p>
+        </div>
+      </div>
+
+    <div class="orbit-caption">
+
+    </div>
+  </li>  
+</ul>
+   </div>
+  </div>
+ </div>
+</div>
+        
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    <div class="row">
+        <div class="large-12 columns">
+        
+          <div class="panel">
+            <h4><font color="Blue">4 Good Anime to Watch and One Second Season.</font></h4>
+                
+            <div class="row">
+              <div class="large-9 columns">
+                <p><font color="red">Anime are Japanese animated productions featuring hand-drawn or computer animation. The word is the abbreviated pronunciation of "animation" in Japanese, where this term references all animation.[1] Outside Japan, anime is defined as animation from Japan or as a Japanese-disseminated animation style often characterized by colorful graphics, vibrant characters and fantastical themes.[2][3] Arguably, the stylization approach to the meaning may open up the possibility of anime produced in countries other than Japan. It is not a bad thing to love anime!</font></p>
+              </div>
+              <div class="large-3 columns">
+                              
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+		
+   <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+
+
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

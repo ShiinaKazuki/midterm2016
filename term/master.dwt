@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <title>Next Cleaners</title>
+
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
+<script src="scripts/angular.min.js"></script>
+
+
+
+
+
+  <style type="text/css">
+
+.auto-style1 {
+	color: #FFFFFF;
+}
+</style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Container -->
+<div id="container">
+	
+	<!-- Begin Navigation -->
+	
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+
+            <li class="name">
+              <h1>
+  				<a href="default.html">
+                  ET-710 Term Project
+            
+                </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+
+            <ul class="right">
+          
+              <li class="divider"></li>
+              <li class="has-dropdown">
+              	<a href="#">4 Presidents</a>
+                <ul class="dropdown">          
+                  <li><a href="Accel%20World/default.html">President Washington</a></li>
+                  <li><a href="Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Sakurasou no Pet na Kanojo</a></li>
+                  <li><a href="No%20Game%20No%20Life/default.html">President Kennedy</a></li>
+                  <li><a href="Sakurasou%20no%20Pet%20na%20Kanojo/default.html">President Obama</a></li>
+                  <li class="divider"></li>
+                                  </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	
+	<div id="content_container">
+		<!-- Begin Left Column -->
+		<div id="column_left">
+			
+			
+			
+			
+			
+			
+			
+			
+		<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Foundation</label></li>
+        <li><a href="#" class="off-canvas-submenu-call">Option 1 <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Sub menu 1</a></li>
+								<li><a href="#">Sub menu 2</a></li>
+								<li><a href="#">Sub menu 3</a></li>
+
+        <li><a href="#" class="off-canvas-submenu-call">Grisaia No Kaijitsu <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="Sakurasou%20no%20Pet%20na%20Kanojo/default.html">Summary</a></li>
+								<li><a href="#">Pictures</a></li>
+								<li>
+								<a href="Grisaia%20no%20Rakuen/default.html">Second Season- Grisaia no Rakuen</a></li>
+							</ul>
+        <li><a href="#" class="off-canvas-submenu-call">Option 3 <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Sub menu 1</a></li>
+								<li><a href="#">Sub menu 2</a></li>
+								<li><a href="#">Sub menu 3</a></li>
+        <li><a href="#" class="off-canvas-submenu-call">Option 4 <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Sub menu 1</a></li>
+								<li><a href="#">Sub menu 2</a></li>
+							</ul>
+        <li><a href="#" class="off-canvas-submenu-call">No Game No Life<span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Sub menu 1</a></li>
+								<li><a href="#">Sub menu 2</a></li>
+
+
+
+
+      </ul>
+    </aside>
+
+    <section class="main-section">    
+	
+			
+			
+			
+			
+		
+      <div class="row">
+        <div class="large-12 columns">
+        <div id="slider">
+        
+        
+        <ul class="example-orbit" data-orbit>
+  <li>
+    <img src="NC%20images/nyc+street+summer.jpg" alt="slide 1" />
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  <li class="active">
+    <img src="NC%20images/IMG_4927.JPG" alt="slide 2" />
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  <li>
+    <img src="NC%20images/next+cleaners+superior+quality.JPG"alt="slide 3" />
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  <li>
+    <img src="NC%20images/pillowsandsheets.jpg" alt="slide 4" />
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+  <li>
+    <img src="NC%20images/next+cleaners+eco+friendly.JPG" alt="slide 5" />
+    <div class="orbit-caption">
+
+    </div>
+  </li>
+</ul>
+
+     
+        
+     
+    <div class="row">
+        <div class="large-12 columns">
+        
+          <div class="panel">
+            <h4>Committed to customer satisfaction and the future of our planet.</h4>
+                
+            <div class="row">
+              <div class="large-9 columns">
+                <p>NextCleaners™ has processed over 1 million orders, 3.5 million pieces of dry cleaning, and 2.5 million pounds of laundry since 2012. We use the most environmentally friendly Wet-Cleaning and GreenEarth technologies to ensure the safety of our customers and our environment.</p>
+              </div>
+              <div class="large-3 columns">
+                              
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+     
+       
+      
+         		
+	     
+
+
+
+
+
+
+
+
+
+		
+		
+			</div>
+		
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		
+		<div id="column_right0">
+			</div>
+		<!-- End Right Column -->
+		
+		
+		    		
+	     
+
+
+
+
+
+
+
+
+
+		
+		
+			</div>
+		
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		
+		<div id="column_right1">
+			</div>
+		<!-- End Right Column -->
+		
+		
+					
+		
+			</div>
+		
+		
+		
+		
+		
+		    </section>
+		
+		
+		
+		
+		
+		
+		
+		
+					
+		
+			</div>
+		
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		
+		<div id="column_right">
+			</div>
+		<!-- End Right Column -->
+		
+		
+		<!-- Begin Footer -->
+		            <footer class="row">
+              <div class="large-12 columns"><hr>
+                  <div class="row">
+
+                    <div class="large-3 columns">
+                        <p>© NEXT CLEANERS, NEW YORK, NY</p>
+                    </div>
+
+                    <div class="large-9 small-12 columns">
+                        <ul class="inline-list right">
+                          <li><a href="#">Order Online</a></li>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="#">Employment</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms of Use</a></li>
+                          <li><a href="#">PlaceHolder</a></li>
+                                    
+                        </ul>
+                    </div>
+
+                  </div>
+              </div>
+            </footer>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+   <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+
+
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
+
+</body>
+
+</html>
